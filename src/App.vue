@@ -1,5 +1,5 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import appHeader from "./components/appHeader.vue";
 
 export default {
   data() {
@@ -8,14 +8,14 @@ export default {
     };
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  components: {
+    appHeader,
+  },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <appHeader />
 </template>
 
 <style lang="scss" scoped></style>
