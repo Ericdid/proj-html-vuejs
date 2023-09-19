@@ -5,8 +5,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faPinterestP } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faLocationDot);
+library.add(
+  faLocationDot,
+  faEnvelope,
+  faClock,
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+  faPinterestP
+);
 
 import { createApp } from "vue";
 import "./style.css";
