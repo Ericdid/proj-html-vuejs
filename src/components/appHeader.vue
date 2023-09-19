@@ -5,7 +5,10 @@ export default {};
 <template>
   <div class="d-flex header">
     <div class="header-top d-flex justify-content-around">
-      <div class="left-menu">prova</div>
+      <div class="left-menu">
+        <font-awesome-icon icon="fa-solid fa-location-dot" />
+        prova
+      </div>
       <div class="right-menu">prova</div>
     </div>
     <div class="header-bottom"></div>
