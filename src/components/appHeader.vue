@@ -32,11 +32,21 @@ export default {};
   </div>
   <!-- this is the header with navigation bar and shopping data -->
   <div class="header-bottom d-flex justify-content-around align-items-center">
+    <!-- left header with logo and navbar -->
     <div class="left-bt-menu d-flex">
       <img src="../assets/img/logo.png" alt="" />
       <div class="d-flex">
         <ul class="d-flex align-items-center h-100">
-          <li>prova</li>
+          <li class="dropdown">
+            Home &#709;
+            <div class="dropdown-content">
+              <p class="content">Home-1</p>
+              <p class="content">Home-2</p>
+              <p class="content">Home-3</p>
+              <p class="content">Home-4</p>
+              <p class="content">Home-5</p>
+            </div>
+          </li>
           <li>prova</li>
           <li>prova</li>
           <li>prova</li>
@@ -60,11 +70,35 @@ export default {};
 .header-bottom {
   height: 100px;
   background-color: aquamarine;
+  // style of navbar and dropdown
   ul {
     list-style-type: none;
     li {
-      padding: 0 5px;
+      padding: 0 10px;
       cursor: pointer;
+      font-weight: 500;
+    }
+    li:hover {
+      color: goldenrod;
+    }
+    .dropdown {
+      position: relative;
+      .dropdown-content {
+        color: black;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+    }
+    .dropdown:hover > .dropdown-content {
+      display: block;
+    }
+    .content:hover {
+      color: goldenrod;
     }
   }
 }
