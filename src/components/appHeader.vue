@@ -32,7 +32,7 @@ export default {};
   </div>
   <!-- this is the header with navigation bar and shopping data -->
   <div class="header-bottom d-flex align-items-center">
-    <!-- left header with logo and navbar -->
+    <!-- left side of header with logo and navbar -->
     <div class="left-bt-menu d-flex">
       <img src="../assets/img/logo.png" alt="" />
       <div class="d-flex">
@@ -92,22 +92,26 @@ export default {};
         </ul>
       </div>
     </div>
+    <!-- right side of header with search and shop -->
     <div
       class="right-bt-menu d-flex justify-content-between align-items-center"
     >
+      <!-- this is the search button -->
       <div class="g-circled">
         <font-awesome-icon
           icon="fa-solid fa-magnifying-glass"
           class="g-circled"
         />
       </div>
-      <div class="shop-nav">
-        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+      <!-- this is the "shopping cart" " -->
+      <div class="shop-nav ms-style">
+        <font-awesome-icon icon="fa-solid fa-cart-shopping ms-style" />
         <div class="shop-circle g-circled">
           <span class="shop-number">0</span>
         </div>
       </div>
-      <div>prova</div>
+      <!-- there is the button -->
+      <div class="button"><strong>Order Now</strong></div>
     </div>
   </div>
 </template>
@@ -170,6 +174,9 @@ export default {};
       border-radius: 50%;
     }
     // this is the shop icon
+    .ms-style {
+      color: rgb(37, 116, 102);
+    }
     .shop-nav {
       position: relative;
       .shop-circle {
@@ -186,6 +193,14 @@ export default {};
           bottom: -2px;
         }
       }
+    }
+    // this is the button
+    .button {
+      background-color: goldenrod;
+      color: #f9f9f9;
+      padding: 10px;
+      margin-left: 10px;
+      border-radius: 0 20px;
     }
   }
 }
