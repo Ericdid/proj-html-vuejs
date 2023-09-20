@@ -201,6 +201,10 @@ export default {};
       padding: 10px;
       margin-left: 10px;
       border-radius: 0 20px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: rgb(37, 116, 102);
     }
   }
 }
