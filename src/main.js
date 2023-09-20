@@ -11,6 +11,8 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPinterestP } from "@fortawesome/free-brands-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faLocationDot,
@@ -19,7 +21,9 @@ library.add(
   faFacebookF,
   faTwitter,
   faInstagram,
-  faPinterestP
+  faPinterestP,
+  faMagnifyingGlass,
+  faCartShopping
 );
 
 import { createApp } from "vue";

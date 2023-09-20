@@ -31,7 +31,7 @@ export default {};
     </div>
   </div>
   <!-- this is the header with navigation bar and shopping data -->
-  <div class="header-bottom d-flex justify-content-around align-items-center">
+  <div class="header-bottom d-flex align-items-center">
     <!-- left header with logo and navbar -->
     <div class="left-bt-menu d-flex">
       <img src="../assets/img/logo.png" alt="" />
@@ -47,16 +47,68 @@ export default {};
               <p class="content">Home-5</p>
             </div>
           </li>
-          <li>prova</li>
-          <li>prova</li>
-          <li>prova</li>
-          <li>prova</li>
-          <li>prova</li>
-          <li>prova</li>
+          <li class="dropdown">
+            About &#709;
+            <div class="dropdown-content">
+              <p class="content">Home-1</p>
+              <p class="content">Home-2</p>
+              <p class="content">Home-3</p>
+              <p class="content">Home-4</p>
+              <p class="content">Home-5</p>
+            </div>
+          </li>
+          <li>Service</li>
+          <li class="dropdown">
+            Portfolio &#709;
+            <div class="dropdown-content">
+              <p class="content">Home-1</p>
+              <p class="content">Home-2</p>
+              <p class="content">Home-3</p>
+              <p class="content">Home-4</p>
+              <p class="content">Home-5</p>
+            </div>
+          </li>
+          <li class="dropdown">
+            Shop &#709;
+            <div class="dropdown-content">
+              <p class="content">Home-1</p>
+              <p class="content">Home-2</p>
+              <p class="content">Home-3</p>
+              <p class="content">Home-4</p>
+              <p class="content">Home-5</p>
+            </div>
+          </li>
+          <li class="dropdown">
+            Blog &#709;
+            <div class="dropdown-content">
+              <p class="content">Home-1</p>
+              <p class="content">Home-2</p>
+              <p class="content">Home-3</p>
+              <p class="content">Home-4</p>
+              <p class="content">Home-5</p>
+            </div>
+          </li>
+          <li>Contact</li>
         </ul>
       </div>
     </div>
-    <div class="right-bt-menu">placeholder</div>
+    <div
+      class="right-bt-menu d-flex justify-content-between align-items-center"
+    >
+      <div class="g-circled">
+        <font-awesome-icon
+          icon="fa-solid fa-magnifying-glass"
+          class="g-circled"
+        />
+      </div>
+      <div class="shop-nav">
+        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+        <div class="shop-circle g-circled">
+          <span class="shop-number">0</span>
+        </div>
+      </div>
+      <div>prova</div>
+    </div>
   </div>
 </template>
 
@@ -70,6 +122,11 @@ export default {};
 .header-bottom {
   height: 100px;
   background-color: aquamarine;
+  // this is the left section
+  .left-bt-menu {
+    width: 60%;
+    margin-left: 10%;
+  }
   // style of navbar and dropdown
   ul {
     list-style-type: none;
@@ -99,6 +156,36 @@ export default {};
     }
     .content:hover {
       color: goldenrod;
+    }
+  }
+  // this is the right section
+  .right-bt-menu {
+    width: 10%;
+    height: 100%;
+    // this is the search icon
+    .g-circled {
+      background-color: goldenrod;
+      color: white;
+      padding: 5px;
+      border-radius: 50%;
+    }
+    // this is the shop icon
+    .shop-nav {
+      position: relative;
+      .shop-circle {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        bottom: 12px;
+        left: 15px;
+        .shop-number {
+          position: absolute;
+          left: 6px;
+          bottom: -2px;
+        }
+      }
     }
   }
 }
