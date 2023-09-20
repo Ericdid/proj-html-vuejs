@@ -29,13 +29,16 @@ export default {
   <div
     class="d-flex justify-content-center align-items-center text-center product-info"
   >
+    <!-- this is all the text in the sextion -->
     <div class="container d-flex product-text">
+      <!-- this is the large text on the left -->
       <div class="large-txt">
         <span class="gold-txt">Lorem ipsum dolor</span> sit amet consectetur
         adipisicing elit. Eaque porro id ipsa
         <span class="gold-txt">labore expedita iusto</span> blanditiis dicta
         error distinctio quis!
       </div>
+      <!-- this is the small text on the right -->
       <div class="small-txt">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
         praesentium suscipit in blanditiis esse neque quo! Praesentium dolor
@@ -99,6 +102,7 @@ export default {
 .product-info {
   height: 500px;
   .product-text {
+    position: relative;
     height: 50%;
     color: rgb(37, 116, 102);
     font-weight: 900;
