@@ -125,7 +125,7 @@ export default {};
 }
 .header-bottom {
   height: 100px;
-  background-color: aquamarine;
+  background-color: lightcyan;
   // this is the left section
   .left-bt-menu {
     width: 60%;
