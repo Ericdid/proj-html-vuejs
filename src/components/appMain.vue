@@ -66,13 +66,15 @@ export default {
       <div class="abs-img">
         <img src="../assets/img/fe-shap1-1.png" alt="" />
       </div>
-      <div class="col-12 d-flex flex-row justify-content-around mt-4">
-        <span class="hidden-arrow">arrow-left</span>
-        <div v-for="fruit in fruitsList">
+      <div
+        class="col-12 d-flex flex-row justify-content-around mt-4 img-section"
+      >
+        <span class="hidden-arrow-lf">&#10094;</span>
+        <div v-for="fruit in fruitsList" class="fruit-img">
           <img :src="fruit.image" alt="" />
           <span class="hidden-txt"> fresh fruit</span>
         </div>
-        <span class="hidden-arrow">arrow-right</span>
+        <span class="hidden-arrow-rt">&#10095;</span>
       </div>
     </div>
   </div>
@@ -153,7 +155,52 @@ export default {
       right: 0;
       bottom: 65%;
     }
-    .product-img {
+    // this is the image section
+    .img-section {
+      position: relative;
+      .hidden-arrow-lf {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 80px;
+        left: 0;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: goldenrod;
+        color: white;
+      }
+      .hidden-arrow-rt {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: goldenrod;
+        color: white;
+      }
+      .img-section:hover .hidden-arrow-rt {
+        display: block;
+      }
+      .fruit-img {
+        position: relative;
+      }
+      .hidden-txt {
+        display: none;
+        position: absolute;
+        bottom: 10%;
+        right: 50%;
+        color: goldenrod;
+      }
+      .fruit-img:hover .hidden-txt {
+        display: inline;
+      }
+    }
+    .img-section:hover .hidden-arrow-rt {
+      display: inline;
+    }
+    .img-section:hover .hidden-arrow-lf {
+      display: inline;
     }
   }
 }
