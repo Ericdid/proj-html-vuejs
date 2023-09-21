@@ -53,14 +53,16 @@ export default {
 </script>
 
 <template>
+  <!-- this is the container of the shop -->
   <div
     class="d-flex container jumboshop text-center align-items-center flex-column"
   >
+    <!-- title of the shop -->
     <div class="title">
       <p class="golden"><strong>Trending Online Store</strong></p>
       <h3>GOGRIN ALL <span class="golden">ORGANIC </span>FOOD</h3>
     </div>
-
+    <!-- this is the navbar -->
     <ul class="d-flex">
       <li>All Product</li>
       <li>Apple</li>
@@ -68,6 +70,7 @@ export default {
       <li>Orange</li>
       <li>Vegetable</li>
     </ul>
+    <!-- this is the shoplist -->
     <div class="d-flex flex-row row col-md-12">
       <div class="col" v-for="element in shopList">
         <img :src="element.image" alt="" />
