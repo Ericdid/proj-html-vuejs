@@ -1,4 +1,6 @@
 <script>
+import shopJumbo from "../components/shopJumbo.vue";
+
 export default {
   data() {
     return {
@@ -17,6 +19,9 @@ export default {
         },
       ],
     };
+  },
+  components: {
+    shopJumbo,
   },
 };
 </script>
@@ -78,6 +83,7 @@ export default {
       </div>
     </div>
   </div>
+  <shopJumbo />
 </template>
 
 <style lang="scss" scoped>
