@@ -1,7 +1,22 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      fruitsList: [
+        {
+          image: "../src/assets/img/fe1.jpg",
+        },
+        {
+          image: "../src/assets/img/fe2.jpg",
+        },
+        {
+          image: "../src/assets/img/fe3.jpg",
+        },
+        {
+          image: "../src/assets/img/fe1.jpg",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -30,16 +45,16 @@ export default {
     class="d-flex justify-content-center align-items-center text-center product-info"
   >
     <!-- this is all the text in the sextion -->
-    <div class="container d-flex product-text">
+    <div class="container d-flex product-text row">
       <!-- this is the large text on the left -->
-      <div class="large-txt">
+      <div class="large-txt col-3">
         <span class="gold-txt">Lorem ipsum dolor</span> sit amet consectetur
         adipisicing elit. Eaque porro id ipsa
         <span class="gold-txt">labore expedita iusto</span> blanditiis dicta
         error distinctio quis!
       </div>
       <!-- this is the small text on the right -->
-      <div class="small-txt">
+      <div class="small-txt col-3">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
         praesentium suscipit in blanditiis esse neque quo! Praesentium dolor
         iusto Lorem ipsum dolor sit amet,
@@ -47,6 +62,17 @@ export default {
         <br />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
         exercitationem asperiores ea animi perspiciatis
+      </div>
+      <div class="abs-img">
+        <img src="../assets/img/fe-shap1-1.png" alt="" />
+      </div>
+      <div class="col-12 d-flex flex-row justify-content-around mt-4">
+        <span class="hidden-arrow">arrow-left</span>
+        <div v-for="fruit in fruitsList">
+          <img :src="fruit.image" alt="" />
+          <span class="hidden-txt"> fresh fruit</span>
+        </div>
+        <span class="hidden-arrow">arrow-right</span>
       </div>
     </div>
   </div>
@@ -120,6 +146,14 @@ export default {
       color: black;
       font-size: medium;
       font-weight: 100;
+    }
+    .abs-img {
+      position: absolute;
+      width: 0;
+      right: 0;
+      bottom: 65%;
+    }
+    .product-img {
     }
   }
 }
